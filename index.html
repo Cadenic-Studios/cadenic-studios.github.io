@@ -5,82 +5,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadenic Studios</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #080f1a; }
+        body { font-family: 'Space Grotesk', sans-serif; background-color: #050b14; }
+        .display-font { font-family: 'Syne', sans-serif; }
+        .glow-green:hover { box-shadow: 0 0 30px rgba(47, 82, 51, 0.3); border-color: rgba(74, 222, 128, 0.4); }
+        .glow-red:hover { box-shadow: 0 0 30px rgba(193, 39, 45, 0.2); border-color: rgba(248, 113, 113, 0.4); }
     </style>
 </head>
-<body class="text-[#e2e8f0] min-h-screen flex flex-col justify-between selection:bg-[#2f5233] selection:text-white">
+<body class="text-[#f1f5f9] min-h-screen flex flex-col justify-between antialiased selection:bg-[#2f5233]">
 
-    <!-- Premium Navigation Header -->
-    <header class="border-b border-[#1e2d42] bg-[#0d1b2a]/90 backdrop-blur-md py-4 px-6 sticky top-0 z-50 shadow-sm">
+    <!-- Navigation Header -->
+    <header class="border-b border-[#111e30] bg-[#070f1a]/90 backdrop-blur-md py-4 px-6 sticky top-0 z-50">
         <div class="max-w-5xl mx-auto flex justify-between items-center">
-            <div class="flex items-center gap-3">
-                <img src="logo.png" alt="Cadenic Studios Logo" class="h-10 w-auto rounded-md shadow-sm">
-                <span class="text-xl font-800 tracking-tight text-white">CADENIC <span class="text-[#2f5233]">STUDIOS</span></span>
-            </div>
-            <nav class="space-x-8 text-sm font-700 tracking-wide text-[#94a3b8]">
+            <a href="#" class="flex items-center gap-3 group">
+                <img src="logo.png" alt="Cadenic Studios" class="h-12 w-auto rounded-xl transition transform group-hover:scale-105 duration-300">
+            </a>
+            <nav class="space-x-8 text-sm font-700 tracking-wider text-[#94a3b8]">
                 <a href="#portfolio" class="hover:text-white transition duration-200">PORTFOLIO</a>
                 <a href="#privacy" class="hover:text-white transition duration-200">PRIVACY</a>
             </nav>
         </div>
     </header>
 
-    <!-- Studio Hero Showcase -->
-    <section class="max-w-5xl mx-auto px-6 pt-16 pb-8 text-center w-full">
-        <img src="logo.png" alt="Cadenic Studios" class="h-28 w-auto mx-auto mb-6 drop-shadow-xl">
-        <h2 class="text-4xl md:text-5xl font-800 text-white tracking-tight max-w-2xl mx-auto leading-tight">
-            Crafting Premium, Utility-Driven <span class="text-[#c1272d]">Mobile Apps</span> & <span class="text-[#2f5233]">Games</span>
-        </h2>
-        <p class="text-[#94a3b8] text-lg font-600 mt-4 max-w-xl mx-auto">
-            Rooted in precision engineering, clean mechanics, and a strict player-first philosophy.
+    <!-- Hero Showcase -->
+    <section class="max-w-5xl mx-auto px-6 pt-20 pb-12 text-center w-full relative">
+        <div class="absolute inset-0 bg-gradient-to-b from-[#2f5233]/5 via-transparent to-transparent blur-3xl pointer-events-none"></div>
+        <img src="logo.png" alt="Cadenic Studios Icon" class="h-32 w-auto mx-auto mb-8 drop-shadow-[0_10px_20px_rgba(47,82,51,0.2)]">
+        <h1 class="display-font text-4xl md:text-6xl font-800 text-white tracking-tight max-w-3xl mx-auto leading-none uppercase">
+            Engineering Imagination.
+        </h1>
+        <p class="text-[#94a3b8] text-lg md:text-xl font-500 mt-6 max-w-2xl mx-auto leading-relaxed">
+            Pioneering the next frontier of mobile experiences with a steadfast commitment to flawless design, player-centric mechanics, and unparalleled value. Cadenic Studios: Where Utility Meets Unforgettable.
         </p>
     </section>
 
-    <!-- Project Matrix Workspace -->
+    <!-- Portfolio Workspace -->
     <main id="portfolio" class="max-w-5xl mx-auto px-6 py-12 space-y-12 flex-grow w-full">
         
-        <!-- Premium Delta-V Card -->
-        <section class="bg-[#0d1b2a] border border-[#1e2d42] rounded-2xl p-8 md:p-10 flex flex-col md:flex-row gap-10 items-center shadow-xl hover:border-[#2f5233]/40 transition duration-300">
-            <div class="w-full md:w-2/5 max-w-[280px] bg-[#080f1a] rounded-xl overflow-hidden aspect-square border border-[#1e2d42] shadow-inner p-4 flex items-center justify-center">
-                <img src="delta-v.png" alt="Delta-V Flight Icon" class="w-full h-full object-contain rounded-lg">
+        <!-- Delta-V Showcase -->
+        <section class="bg-[#0b1322] border border-[#16253b] rounded-2xl p-8 md:p-10 flex flex-col md:flex-row gap-10 items-center transition duration-300 glow-green relative overflow-hidden group">
+            <div class="w-full md:w-2/5 max-w-[280px] bg-[#050b14] rounded-xl overflow-hidden aspect-square border border-[#16253b] p-4 flex items-center justify-center relative">
+                <img src="delta-v.png" alt="Delta-V Flight Icon" class="w-full h-full object-contain rounded-lg transition transform group-hover:scale-105 duration-500">
             </div>
             <div class="w-full md:w-3/5 space-y-5">
-                <div class="flex items-center gap-3">
-                    <h3 class="text-3xl font-800 text-white tracking-tight">Delta-V</h3>
+                <div class="flex items-center gap-3 flex-wrap">
+                    <h3 class="display-font text-3xl font-800 text-white tracking-tight uppercase">Delta-V: An Orbital Odyssey</h3>
                     <span class="bg-[#2f5233]/20 text-[#4ade80] border border-[#2f5233]/40 text-xs px-3 py-1 rounded-full font-700 tracking-wider">LIVE ON PLAY STORE</span>
                 </div>
-                <p class="text-[#94a3b8] text-base font-600 leading-relaxed">
-                    Master complex orbital mechanics, conquer planetary gravity, and construct your spacecraft in an authentic 2D flight simulator. Features a granular, deep customization garage workspace packed with over 500 components, daily space trivia, and global leaderboards. Built without forced ad interruptions.
+                <p class="text-[#94a3b8] text-base font-500 leading-relaxed">
+                    Master gravity and momentum in a breathtaking physics simulator. Design, construct, and pilot your spacecraft across deep space with a depth of over 600 components. Built on a sacred promise of no forced ads, only the purest flight mechanics. Your cosmos awaits.
                 </p>
-                <div>
-                    <a href="#" class="inline-block bg-[#2f5233] hover:bg-[#244027] text-white text-sm font-700 px-6 py-3.5 rounded-xl transition duration-150 shadow-md">
-                        DOWNLOAD ON GOOGLE PLAY
+                <div class="pt-2">
+                    <a href="#" class="inline-block bg-[#2f5233] hover:bg-[#1f3722] text-white text-sm font-700 px-6 py-4 rounded-xl transition duration-200 tracking-wide uppercase shadow-lg shadow-[#2f5233]/20">
+                        Download On Google Play
                     </a>
                 </div>
             </div>
         </section>
 
-        <!-- Premium Scorebug Card -->
-        <section class="bg-[#0d1b2a] border border-[#1e2d42] rounded-2xl p-8 md:p-10 flex flex-col md:flex-row gap-10 items-center shadow-xl hover:border-[#c1272d]/40 transition duration-300">
-            <div class="w-full md:w-2/5 max-w-[280px] bg-[#080f1a] rounded-xl overflow-hidden aspect-square border border-[#1e2d42] shadow-inner p-6 flex items-center justify-center">
-                <img src="scorebug-banner.png" alt="Scorebug App Asset" class="w-full h-auto object-contain">
+        <!-- Scorebug Showcase -->
+        <section class="bg-[#0b1322] border border-[#16253b] rounded-2xl p-8 md:p-10 flex flex-col md:flex-row gap-10 items-center transition duration-300 glow-red relative overflow-hidden group">
+            <div class="w-full md:w-2/5 max-w-[280px] bg-[#050b14] rounded-xl overflow-hidden aspect-square border border-[#16253b] p-4 flex items-center justify-center">
+                <img src="scorebug-white-icon.png" alt="Scorebug Tracking Interface" class="w-full h-full object-contain rounded-lg transition transform group-hover:scale-105 duration-500">
             </div>
             <div class="w-full md:w-3/5 space-y-5">
-                <div class="flex items-center gap-3">
-                    <h3 class="text-3xl font-800 text-white tracking-tight">Scorebug</h3>
+                <div class="flex items-center gap-3 flex-wrap">
+                    <h3 class="display-font text-3xl font-800 text-white tracking-tight uppercase">Scorebug: Unrivaled Sports Clarity</h3>
                     <span class="bg-[#c1272d]/10 text-[#f87171] border border-[#c1272d]/30 text-xs px-3 py-1 rounded-full font-700 tracking-wider">IN ACTIVE DEV</span>
                 </div>
-                <p class="text-[#94a3b8] text-base font-600 leading-relaxed">
-                    A sleek, highly optimized sports chronicling interface designed to capture and display real-time sports feed summaries. Features clean data widgets, direct user communication wires, and simplified telemetry tracking designed entirely to cut through mainstream media clutter.
+                <p class="text-[#94a3b8] text-base font-500 leading-relaxed">
+                    Experience a definitive, noise-free sports feed. Your custom centralized wire delivers refined analytics, essential telemetry, and direct communication, ensuring absolute focus on the metrics that matter. Cut through the mainstream clutter and dominate your game tracking.
                 </p>
             </div>
         </section>
 
-        <!-- Compliance Content Node -->
-        <section id="privacy" class="border-t border-[#1e2d42] pt-12 space-y-4">
-            <h3 class="text-xl font-800 tracking-tight text-white">Legal Documents & Privacy Compliances</h3>
-            <div class="bg-[#0d1b2a] border border-[#1e2d42] rounded-xl p-6 h-56 overflow-y-scroll text-sm text-[#94a3b8] space-y-4 font-600 leading-relaxed shadow-inner">
+        <!-- Privacy Node -->
+        <section id="privacy" class="border-t border-[#16253b] pt-12 space-y-4">
+            <h3 class="display-font text-xl font-700 tracking-wider text-white uppercase">Legal Documents & Privacy Compliances</h3>
+            <div class="bg-[#050b14] border border-[#16253b] rounded-xl p-6 h-56 overflow-y-scroll text-sm text-[#94a3b8] space-y-4 font-500 leading-relaxed shadow-inner">
                 <p class="text-white font-700">Last Updated: June 2026</p>
                 <p>Cadenic Studios operates the mobile software application Delta-V. We are dedicated to protecting player privacy layouts across all device operations.</p>
                 <p class="text-white font-700">1. Local Device Telemetry & Balances</p>
@@ -91,10 +94,10 @@
         </section>
     </main>
 
-    <!-- Global Footer Context -->
-    <footer class="border-t border-[#1e2d42] bg-[#0d1b2a] py-6 text-center text-xs font-600 text-[#64748b]">
-        <p>&copy; 2026 Cadenic Studios. All Rights Reserved. All referenced app platforms belong exclusively to their respective maintainers.</p>
+    <!-- Footer -->
+    <footer class="border-t border-[#16253b] bg-[#070f1a] py-6 text-center text-xs font-500 text-[#64748b] tracking-wider">
+        <p>&copy; 2026 CADENIC STUDIOS. ALL RIGHTS RESERVED.</p>
     </footer>
 
 </body>
-</html>  
+</html>
