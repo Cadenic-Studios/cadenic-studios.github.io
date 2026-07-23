@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary SEO -->
+    <title>Scorebug — Chronicle, Review &amp; Rate Live Sporting Events | Cadenic Studios</title>
+    <meta name="description" content="Scorebug is the premium mobile platform for chronicling, reviewing, and rating live sporting events. Track every game across every sport on one unified timeline. Join the waitlist — coming soon to iOS and Android.">
+    <meta name="keywords" content="live sports tracker, sports chronicle app, rate sporting events, sports journal, game tracker, hockey scores, NHL tracker, sports diary app, Scorebug">
+    <meta name="author" content="Cadenic Studios">
+    <meta name="theme-color" content="#14100b">
+    <link rel="canonical" href="https://cadenic-studios.github.io/scorebug.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Cadenic Studios">
+    <meta property="og:title" content="Scorebug — The Front Office for the Ultimate Sports Fan">
+    <meta property="og:description" content="The premium mobile platform for chronicling, reviewing, and rating live sporting events. Join the waitlist.">
+    <meta property="og:url" content="https://cadenic-studios.github.io/scorebug.html">
+    <meta property="og:image" content="https://cadenic-studios.github.io/scorebug-banner.png">
+    <meta property="og:image:alt" content="Scorebug — Chronicle Your Sports">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Scorebug — The Front Office for the Ultimate Sports Fan">
+    <meta name="twitter:description" content="Chronicle, review, and rate every live sporting event on one unified timeline. Coming soon to iOS &amp; Android.">
+    <meta name="twitter:image" content="https://cadenic-studios.github.io/scorebug-banner.png">
+
+    <link rel="icon" type="image/png" href="scorebug-white-icon.png">
+    <link rel="apple-touch-icon" href="scorebug-white-icon.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,900&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="scorebug.css">
+    <noscript><style>.reveal{opacity:1 !important;transform:none !important;}</style></noscript>
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Scorebug",
+      "applicationCategory": "SportsApplication",
+      "operatingSystem": "iOS, Android",
+      "description": "The premium mobile platform for chronicling, reviewing, and rating live sporting events on one unified cross-sport timeline.",
+      "publisher": { "@type": "Organization", "name": "Cadenic Studios" },
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "availability": "https://schema.org/PreOrder" }
+    }
+    </script>
+</head>
+
+<body class="min-h-screen flex flex-col antialiased">
+
+    <!-- ===================== Header ===================== -->
+    <header class="sticky top-0 z-50 border-b border-[color:var(--line)] bg-[color:var(--espresso-black)]/85 backdrop-blur-md">
+        <div class="max-w-6xl mx-auto flex items-center justify-between px-5 sm:px-6 py-3.5">
+            <a href="index.html" class="group flex items-center gap-3">
+                <span aria-hidden="true" class="text-[color:var(--ink-muted)] group-hover:text-[color:var(--brass)] transition text-lg leading-none">&larr;</span>
+                <img src="scorebug-white-icon.png" alt="Scorebug logo" class="h-9 w-9 rounded-lg object-cover">
+                <span class="display text-lg font-bold text-[color:var(--cream)] tracking-tight">Scorebug</span>
+            </a>
+            <nav class="flex items-center gap-6">
+                <a href="#features" class="label hidden sm:inline text-xs font-bold text-[color:var(--ink-muted)] hover:text-[color:var(--cream)] transition">FEATURES</a>
+                <a href="#mockup" class="label hidden sm:inline text-xs font-bold text-[color:var(--ink-muted)] hover:text-[color:var(--cream)] transition">PREVIEW</a>
+                <a href="#waitlist" class="btn-beacon label text-[11px] font-bold px-4 py-2 rounded-lg">JOIN WAITLIST</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+
+        <!-- ===================== Hero ===================== -->
+        <section class="relative max-w-6xl mx-auto px-5 sm:px-6 pt-16 sm:pt-24 pb-14">
+            <div class="grid lg:grid-cols-2 gap-14 lg:gap-10 items-center">
+
+                <!-- Copy + capture -->
+                <div class="reveal">
+                    <div class="inline-flex items-center gap-2.5 rounded-full border border-[color:var(--line)] bg-[color:var(--espresso)]/60 px-3.5 py-1.5 mb-7">
+                        <span class="beacon-dot"></span>
+                        <span class="label text-[10px] font-bold text-[color:var(--ink-muted)]">PRE-LAUNCH &middot; CHRONICLE YOUR SPORTS</span>
+                    </div>
+
+                    <h1 class="display text-4xl sm:text-5xl lg:text-6xl font-black text-[color:var(--cream)] leading-[1.02] tracking-tight">
+                        The Front Office for the<br class="hidden sm:block"> Ultimate Sports Fan.
+                    </h1>
+
+                    <p class="mt-6 text-lg text-[color:var(--ink-muted)] leading-relaxed max-w-xl">
+                        The premium mobile platform for chronicling, reviewing, and rating live sporting events &mdash; every league, every night, on one unified wire.
+                    </p>
+
+                    <!-- Email capture -->
+                    <form id="waitlist" class="mt-9 max-w-lg" novalidate>
+                        <div class="flex flex-col sm:flex-row gap-3">
+                            <label for="email" class="sr-only">Email address</label>
+                            <input id="email" name="email" type="email" required autocomplete="email"
+                                   placeholder="you@example.com"
+                                   class="field flex-grow rounded-xl px-4 py-3.5 text-sm">
+                            <button type="submit" class="btn-beacon label text-xs font-bold px-6 py-3.5 rounded-xl whitespace-nowrap">
+                                JOIN THE WAITLIST
+                            </button>
+                        </div>
+                        <p id="form-msg" role="status" aria-live="polite" class="mt-3 text-xs text-[color:var(--ink-faint)]">
+                            Be first on the docket. No spam &mdash; just launch day.
+                        </p>
+                    </form>
+
+                    <!-- Store badges -->
+                    <div class="mt-8 flex flex-wrap items-center gap-3">
+                        <span class="label text-[10px] font-bold text-[color:var(--ink-faint)]">COMING SOON</span>
+                        <span class="store-badge flex items-center gap-2 rounded-xl px-4 py-2.5">
+                            <svg viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor" aria-hidden="true"><path d="M16.5 1.9c.1 1-.3 2-1 2.8-.7.8-1.8 1.4-2.9 1.3-.1-1 .4-2 1-2.7.7-.8 1.9-1.4 2.9-1.4zM20 17.1c-.5 1.2-.8 1.7-1.5 2.8-1 1.5-2.3 3.4-4 3.4-1.5 0-1.9-1-3.9-1s-2.5 1-3.9 1c-1.7 0-3-1.7-4-3.2C-.1 16.9-.5 11.7 1.6 9c1-1.4 2.6-2.2 4.1-2.2 1.6 0 2.6 1 3.9 1 1.3 0 2-1 3.9-1 1.3 0 2.7.7 3.7 2-3.2 1.8-2.7 6.4.8 8.3z"/></svg>
+                            <span class="text-sm font-medium">App Store</span>
+                        </span>
+                        <span class="store-badge flex items-center gap-2 rounded-xl px-4 py-2.5">
+                            <svg viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor" aria-hidden="true"><path d="M3.6 1.3 13.9 12 3.6 22.7c-.3-.2-.6-.6-.6-1.2V2.5c0-.6.3-1 .6-1.2zm11.5 11.8 2.7 2.8-9.1 5.2 6.4-8zm4.2-2.1c.7.4 1.1 1 1.1 1.7s-.4 1.3-1.1 1.7l-2.1 1.2-3-3.1 3-3.1 2.1 1.6zM6.7 2 15.8 7.2 13.1 10 6.7 2z"/></svg>
+                            <span class="text-sm font-medium">Google Play</span>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Hero glass panel: a docket at a glance -->
+                <div class="reveal lg:justify-self-end">
+                    <div class="glass glass-card rounded-3xl p-6 sm:p-7 max-w-md">
+                        <div class="flex items-center justify-between mb-5">
+                            <span class="label text-[10px] font-bold text-[color:var(--ink-muted)]">TONIGHT&rsquo;S WIRE</span>
+                            <span class="flex items-center gap-2">
+                                <span class="beacon-dot"></span>
+                                <span class="label text-[10px] font-bold text-[color:var(--beacon)]">3 LIVE</span>
+                            </span>
+                        </div>
+
+                        <div class="mini-card rounded-2xl p-4 mb-3">
+                            <div class="team-row">
+                                <div class="flex items-center gap-3">
+                                    <span class="team-badge oilers">EDM</span>
+                                    <div>
+                                        <p class="text-sm font-bold text-[color:var(--cream)]">Oilers</p>
+                                        <p class="text-[11px] text-[color:var(--ink-faint)]">32-14-4</p>
+                                    </div>
+                                </div>
+                                <span class="score mono">4</span>
+                            </div>
+                            <div class="rule my-3"></div>
+                            <div class="team-row">
+                                <div class="flex items-center gap-3">
+                                    <span class="team-badge flames">CGY</span>
+                                    <div>
+                                        <p class="text-sm font-bold text-[color:var(--cream)]">Flames</p>
+                                        <p class="text-[11px] text-[color:var(--ink-faint)]">24-19-6</p>
+                                    </div>
+                                </div>
+                                <span class="score mono">2</span>
+                            </div>
+                            <div class="flex items-center justify-between mt-4">
+                                <span class="flex items-center gap-2 label text-[10px] font-bold text-[color:var(--beacon)]"><span class="beacon-dot"></span>3RD &middot; 08:12</span>
+                                <span class="label text-[10px] font-bold text-[color:var(--ink-faint)]">ROGERS PLACE</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between px-1">
+                            <div>
+                                <p class="label text-[9px] text-[color:var(--ink-faint)]">YOUR RATING</p>
+                                <p class="display text-lg font-bold text-[color:var(--brass)]">9.2 <span class="text-[color:var(--ink-faint)] text-xs">/ 10</span></p>
+                            </div>
+                            <span class="window-pill">LOGGING &middot; 71:48 LEFT</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="max-w-6xl mx-auto px-6"><div class="rule-double"></div></div>
+
+        <!-- ===================== Features ===================== -->
+        <section id="features" class="max-w-6xl mx-auto px-5 sm:px-6 py-16 sm:py-20">
+            <div class="text-center max-w-2xl mx-auto mb-14 reveal">
+                <p class="label text-[11px] font-bold text-[color:var(--brass-soft)] mb-3">THE MASTHEAD</p>
+                <h2 class="display text-3xl sm:text-4xl font-black text-[color:var(--cream)] tracking-tight">Built for the fan who keeps the record.</h2>
+                <p class="mt-4 text-[color:var(--ink-muted)]">Three tools that turn a night of games into a chronicle worth keeping.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+
+                <!-- Feature 1 -->
+                <article class="glass glass-card rounded-2xl p-7 reveal">
+                    <div class="chip h-12 w-12 rounded-xl grid place-items-center mb-6">
+                        <svg viewBox="0 0 24 24" class="h-6 w-6 text-[color:var(--brass)]" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/><circle cx="8.5" cy="14" r="1"/><circle cx="15.5" cy="14" r="1"/><circle cx="12" cy="17.5" r="1"/></svg>
+                    </div>
+                    <h3 class="display text-xl font-bold text-[color:var(--cream)] mb-2">The Omniverse Calendar</h3>
+                    <p class="text-sm text-[color:var(--ink-muted)] leading-relaxed">
+                        Every sport, every league, one unified cross-sport timeline. Hockey to hoops to the pitch &mdash; your entire slate lives on a single, beautifully ordered wire.
+                    </p>
+                </article>
+
+                <!-- Feature 2 -->
+                <article class="glass glass-card rounded-2xl p-7 reveal">
+                    <div class="chip h-12 w-12 rounded-xl grid place-items-center mb-6">
+                        <svg viewBox="0 0 24 24" class="h-6 w-6 text-[color:var(--beacon)]" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+                    </div>
+                    <h3 class="display text-xl font-bold text-[color:var(--cream)] mb-2">Live Event Docketing</h3>
+                    <p class="text-sm text-[color:var(--ink-muted)] leading-relaxed">
+                        Log games as they happen inside a strict <span class="text-[color:var(--parchment)] font-medium">72-hour window</span>. Your ratings and notes stay honest &mdash; captured in the moment, sealed to the record.
+                    </p>
+                </article>
+
+                <!-- Feature 3 -->
+                <article class="glass glass-card rounded-2xl p-7 reveal">
+                    <div class="chip h-12 w-12 rounded-xl grid place-items-center mb-6">
+                        <svg viewBox="0 0 24 24" class="h-6 w-6 text-[color:var(--brass)]" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>
+                    </div>
+                    <h3 class="display text-xl font-bold text-[color:var(--cream)] mb-2">Premium Insights</h3>
+                    <p class="text-sm text-[color:var(--ink-muted)] leading-relaxed">
+                        Advanced data visualization turns your logged history into signal. Track streaks, tendencies, and telemetry with charts built for the numbers that actually move the needle.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- ===================== Mockup showcase ===================== -->
+        <section id="mockup" class="relative overflow-hidden">
+            <div class="max-w-6xl mx-auto px-5 sm:px-6 py-16 sm:py-20">
+                <div class="grid lg:grid-cols-2 gap-14 items-center">
+
+                    <!-- Phone -->
+                    <div class="reveal flex justify-center lg:justify-start order-2 lg:order-1">
+                        <div class="phone">
+                            <div class="phone-screen">
+                                <div class="notch"></div>
+                                <div class="screen-scroll">
+
+                                    <!-- App header -->
+                                    <div class="flex items-center justify-between mb-4">
+                                        <div>
+                                            <p class="app-tag label">MY DOCKET</p>
+                                            <p class="app-title display font-bold">Wednesday</p>
+                                        </div>
+                                        <span class="flex items-center gap-1.5 window-pill"><span class="beacon-dot"></span>LIVE</span>
+                                    </div>
+
+                                    <!-- Featured game -->
+                                    <div class="mini-card rounded-2xl p-3.5 mb-3">
+                                        <div class="flex items-center justify-between mb-2.5">
+                                            <span class="app-tag label">NHL &middot; PACIFIC</span>
+                                            <span class="app-tag label text-[color:var(--beacon)]">3RD 08:12</span>
+                                        </div>
+                                        <div class="team-row mb-2">
+                                            <div class="flex items-center gap-2.5">
+                                                <span class="team-badge oilers">EDM</span>
+                                                <span class="text-[13px] font-bold text-[color:var(--cream)]">Oilers</span>
+                                            </div>
+                                            <span class="score mono">4</span>
+                                        </div>
+                                        <div class="team-row">
+                                            <div class="flex items-center gap-2.5">
+                                                <span class="team-badge flames">CGY</span>
+                                                <span class="text-[13px] font-bold text-[color:var(--cream)]">Flames</span>
+                                            </div>
+                                            <span class="score mono">2</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Player telemetry -->
+                                    <p class="app-tag label mb-2">STAR TELEMETRY</p>
+                                    <div class="mini-card rounded-2xl p-3.5 mb-3 space-y-3">
+                                        <div>
+                                            <div class="flex items-center justify-between text-[12px] mb-1">
+                                                <span class="text-[color:var(--cream)] font-medium">C. McDavid</span>
+                                                <span class="mono text-[color:var(--ink-muted)]">2G &middot; 1A</span>
+                                            </div>
+                                            <div class="stat-bar"><span style="width:86%"></span></div>
+                                        </div>
+                                        <div>
+                                            <div class="flex items-center justify-between text-[12px] mb-1">
+                                                <span class="text-[color:var(--cream)] font-medium">L. Draisaitl</span>
+                                                <span class="mono text-[color:var(--ink-muted)]">1G &middot; 2A</span>
+                                            </div>
+                                            <div class="stat-bar"><span style="width:74%"></span></div>
+                                        </div>
+                                        <div>
+                                            <div class="flex items-center justify-between text-[12px] mb-1">
+                                                <span class="text-[color:var(--cream)] font-medium">S. Skinner</span>
+                                                <span class="mono text-[color:var(--ink-muted)]">.931 SV%</span>
+                                            </div>
+                                            <div class="stat-bar"><span style="width:93%"></span></div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Docket list -->
+                                    <p class="app-tag label mb-1">ALSO ON THE WIRE</p>
+                                    <div class="mini-card rounded-2xl px-3.5 py-1">
+                                        <div class="docket-item">
+                                            <span class="beacon-dot"></span>
+                                            <span class="text-[12px] text-[color:var(--parchment)] flex-grow">Canucks vs Kings</span>
+                                            <span class="mono text-[11px] text-[color:var(--ink-muted)]">1-1</span>
+                                        </div>
+                                        <div class="docket-item">
+                                            <span class="h-2 w-2 rounded-full bg-[color:var(--ink-faint)]"></span>
+                                            <span class="text-[12px] text-[color:var(--parchment)] flex-grow">Nuggets vs Suns</span>
+                                            <span class="mono text-[11px] text-[color:var(--ink-faint)]">7:00</span>
+                                        </div>
+                                        <div class="docket-item">
+                                            <span class="h-2 w-2 rounded-full bg-[color:var(--brass-soft)]"></span>
+                                            <span class="text-[12px] text-[color:var(--parchment)] flex-grow">Rated: Leafs vs Bruins</span>
+                                            <span class="display text-[12px] font-bold text-[color:var(--brass)]">8.7</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Copy -->
+                    <div class="reveal order-1 lg:order-2">
+                        <p class="label text-[11px] font-bold text-[color:var(--brass-soft)] mb-3">THE FRONT OFFICE, IN YOUR POCKET</p>
+                        <h2 class="display text-3xl sm:text-4xl font-black text-[color:var(--cream)] tracking-tight leading-tight">
+                            A lived-in record of every night you watched.
+                        </h2>
+                        <p class="mt-5 text-[color:var(--ink-muted)] leading-relaxed">
+                            Scorebug reads like the sports section you always wanted &mdash; scores and telemetry up top, your own ratings and notes sealed underneath. Open it a season later and the whole night comes back.
+                        </p>
+                        <ul class="mt-7 space-y-3">
+                            <li class="flex items-start gap-3 text-sm text-[color:var(--parchment)]">
+                                <span class="mt-0.5 text-[color:var(--brass)]">&#10022;</span>
+                                <span>Real-time scores and star telemetry, refined &mdash; never the mainstream clutter.</span>
+                            </li>
+                            <li class="flex items-start gap-3 text-sm text-[color:var(--parchment)]">
+                                <span class="mt-0.5 text-[color:var(--brass)]">&#10022;</span>
+                                <span>Your rating and reactions, timestamped inside the 72-hour docket window.</span>
+                            </li>
+                            <li class="flex items-start gap-3 text-sm text-[color:var(--parchment)]">
+                                <span class="mt-0.5 text-[color:var(--brass)]">&#10022;</span>
+                                <span>Every entry archived to a searchable, cross-sport chronicle.</span>
+                            </li>
+                        </ul>
+                        <a href="#waitlist" class="btn-beacon label inline-block mt-8 text-xs font-bold px-6 py-3.5 rounded-xl">CLAIM YOUR SPOT</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== Closing CTA ===================== -->
+        <section class="max-w-6xl mx-auto px-5 sm:px-6 pb-20">
+            <div class="glass rounded-3xl p-9 sm:p-14 text-center reveal">
+                <span class="beacon-dot mx-auto mb-5"></span>
+                <h2 class="display text-3xl sm:text-4xl font-black text-[color:var(--cream)] tracking-tight max-w-2xl mx-auto">
+                    The first chronicle starts at launch. Get on the wire.
+                </h2>
+                <p class="mt-4 text-[color:var(--ink-muted)] max-w-xl mx-auto">Join the waitlist and be first on the docket when Scorebug goes live on iOS and Android.</p>
+                <form class="waitlist-mirror mt-8 max-w-md mx-auto" novalidate>
+                    <div class="flex flex-col sm:flex-row gap-3">
+                        <label for="email2" class="sr-only">Email address</label>
+                        <input id="email2" name="email" type="email" required autocomplete="email" placeholder="you@example.com" class="field flex-grow rounded-xl px-4 py-3.5 text-sm">
+                        <button type="submit" class="btn-beacon label text-xs font-bold px-6 py-3.5 rounded-xl whitespace-nowrap">JOIN THE WAITLIST</button>
+                    </div>
+                    <p class="form-msg mt-3 text-xs text-[color:var(--ink-faint)]" role="status" aria-live="polite">No spam &mdash; just launch day.</p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===================== Footer ===================== -->
+    <footer class="border-t border-[color:var(--line)] bg-[color:var(--espresso-black)]/80">
+        <div class="max-w-6xl mx-auto px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+                <img src="scorebug-white-icon.png" alt="Scorebug" class="h-8 w-8 rounded-lg object-cover">
+                <span class="text-xs text-[color:var(--ink-faint)]">Scorebug &mdash; Chronicle Your Sports</span>
+            </div>
+            <div class="flex items-center gap-6 label text-[10px] font-bold">
+                <a href="index.html" class="text-[color:var(--ink-muted)] hover:text-[color:var(--cream)] transition">&larr; CADENIC STUDIOS</a>
+                <a href="index.html#privacy" class="text-[color:var(--ink-muted)] hover:text-[color:var(--cream)] transition">PRIVACY</a>
+            </div>
+        </div>
+        <p class="text-center text-[10px] text-[color:var(--ink-faint)] pb-6 label">&copy; 2026 CADENIC STUDIOS. ALL RIGHTS RESERVED.</p>
+    </footer>
+
+    <script>
+      // Scroll reveal
+      (function () {
+        var els = document.querySelectorAll('.reveal');
+        if (!('IntersectionObserver' in window)) { els.forEach(function (e) { e.classList.add('in'); }); return; }
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+        }, { threshold: 0.14 });
+        els.forEach(function (e) { io.observe(e); });
+        // Failsafe: never leave content stuck at opacity:0 if the observer
+        // hasn't fired (e.g. background/non-compositing tab).
+        setTimeout(function () { els.forEach(function (e) { e.classList.add('in'); }); }, 2500);
+      })();
+
+      // Waitlist capture — client-side confirmation.
+      // NOTE: GitHub Pages is static, so this does NOT persist emails on its own.
+      // To actually collect signups, point `action` at a collector (Formspree,
+      // Buttondown, Mailchimp embed, etc.) and remove the preventDefault below.
+      (function () {
+        function wire(form, msgEl) {
+          form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            var input = form.querySelector('input[type=email]');
+            var val = (input.value || '').trim();
+            var ok = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val);
+            if (!ok) {
+              msgEl.textContent = 'Please enter a valid email address.';
+              msgEl.style.color = 'var(--beacon)';
+              input.focus();
+              return;
+            }
+            msgEl.textContent = "You're on the wire — we'll be in touch at launch. 🏒";
+            msgEl.style.color = 'var(--brass)';
+            input.value = '';
+            input.disabled = true;
+            form.querySelector('button[type=submit]').disabled = true;
+          });
+        }
+        var main = document.getElementById('waitlist');
+        if (main) wire(main, document.getElementById('form-msg'));
+        document.querySelectorAll('.waitlist-mirror').forEach(function (f) {
+          wire(f, f.querySelector('.form-msg'));
+        });
+      })();
+    </script>
+</body>
+</html>

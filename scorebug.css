@@ -1,0 +1,223 @@
+/* ==========================================================================
+   Scorebug — "Espresso Broadsheet" theme
+   A vintage sports-broadsheet feel merged with modern, tactile glass tech.
+   Pairs with Tailwind (CDN) for layout utilities; this file owns the
+   palette, textures, glassmorphism and the phone-mockup UI.
+   ========================================================================== */
+
+:root {
+  /* Espresso / charcoal bases */
+  --espresso-black: #14100b;
+  --espresso:       #1c160f;
+  --espresso-soft:  #241d14;
+  --panel:          #2a2118;
+  --panel-hi:       #332818;
+
+  /* Warm parchment / cream inks */
+  --cream:      #f4ecdb;
+  --parchment:  #e7dbc4;
+  --ink-muted:  #b8a988;
+  --ink-faint:  #8a7c62;
+
+  /* Accents — red beacon (from the SB siren) + brass gilt */
+  --beacon:      #e23b34;
+  --beacon-deep: #b5262a;
+  --beacon-glow: rgba(226, 59, 52, 0.45);
+  --brass:       #d8b25e;
+  --brass-soft:  #c9a25e;
+
+  /* Warm hairline borders */
+  --line:      rgba(216, 178, 94, 0.16);
+  --line-soft: rgba(244, 236, 219, 0.08);
+}
+
+/* --- Base ----------------------------------------------------------------- */
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  color: var(--parchment);
+  background-color: var(--espresso-black);
+  /* Layered espresso pours + faint paper grain for the broadsheet substrate. */
+  background-image:
+    radial-gradient(1200px 620px at 78% -8%, rgba(226, 59, 52, 0.10), transparent 60%),
+    radial-gradient(1000px 700px at 8% 4%, rgba(216, 178, 94, 0.07), transparent 55%),
+    radial-gradient(900px 900px at 50% 120%, rgba(60, 44, 26, 0.55), transparent 60%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 140 140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+  background-attachment: fixed;
+}
+
+.display { font-family: 'Fraunces', Georgia, 'Times New Roman', serif; }
+.label   { font-family: 'Space Grotesk', sans-serif; letter-spacing: 0.22em; }
+
+::selection { background: var(--beacon-deep); color: #fff; }
+
+/* --- Broadsheet nameplate rule ------------------------------------------- */
+.rule {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--line), transparent);
+}
+.rule-double {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line-soft);
+  height: 4px;
+}
+
+/* --- Glassmorphism -------------------------------------------------------- */
+.glass {
+  background: linear-gradient(155deg, rgba(58, 46, 32, 0.55), rgba(28, 22, 15, 0.42));
+  backdrop-filter: blur(14px) saturate(120%);
+  -webkit-backdrop-filter: blur(14px) saturate(120%);
+  border: 1px solid var(--line);
+  box-shadow:
+    inset 0 1px 0 rgba(244, 236, 219, 0.06),
+    0 24px 60px -30px rgba(0, 0, 0, 0.85);
+}
+.glass-card {
+  position: relative;
+  transition: transform .35s cubic-bezier(.2,.7,.2,1), border-color .35s, box-shadow .35s;
+  overflow: hidden;
+}
+.glass-card::before {
+  /* soft top-left sheen */
+  content: "";
+  position: absolute; inset: 0;
+  background: radial-gradient(120% 80% at 0% 0%, rgba(244, 236, 219, 0.08), transparent 45%);
+  pointer-events: none;
+}
+.glass-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(216, 178, 94, 0.34);
+  box-shadow:
+    inset 0 1px 0 rgba(244, 236, 219, 0.08),
+    0 34px 70px -28px rgba(0, 0, 0, 0.9),
+    0 0 40px -18px var(--beacon-glow);
+}
+
+/* --- Beacon (the siren accent) ------------------------------------------- */
+.beacon-dot {
+  width: 9px; height: 9px; border-radius: 999px;
+  background: var(--beacon);
+  box-shadow: 0 0 0 0 var(--beacon-glow);
+  animation: beacon 2s ease-out infinite;
+}
+@keyframes beacon {
+  0%   { box-shadow: 0 0 0 0 var(--beacon-glow); }
+  70%  { box-shadow: 0 0 0 12px rgba(226, 59, 52, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(226, 59, 52, 0); }
+}
+
+/* --- Buttons -------------------------------------------------------------- */
+.btn-beacon {
+  background: linear-gradient(180deg, var(--beacon), var(--beacon-deep));
+  color: #fff;
+  box-shadow: 0 10px 24px -10px var(--beacon-glow), inset 0 1px 0 rgba(255,255,255,0.22);
+  transition: transform .18s ease, box-shadow .25s ease, filter .2s;
+}
+.btn-beacon:hover { transform: translateY(-2px); filter: brightness(1.06); box-shadow: 0 16px 34px -12px var(--beacon-glow), inset 0 1px 0 rgba(255,255,255,0.25); }
+.btn-beacon:active { transform: translateY(0); }
+
+.store-badge {
+  border: 1px solid var(--line);
+  background: rgba(20, 16, 11, 0.6);
+  color: var(--parchment);
+  transition: border-color .25s, background .25s, transform .2s;
+}
+.store-badge:hover { border-color: rgba(216, 178, 94, 0.4); background: rgba(42, 33, 24, 0.7); transform: translateY(-2px); }
+
+.field {
+  background: rgba(20, 16, 11, 0.7);
+  border: 1px solid var(--line);
+  color: var(--cream);
+  transition: border-color .2s, box-shadow .2s;
+}
+.field::placeholder { color: var(--ink-faint); }
+.field:focus {
+  outline: none;
+  border-color: rgba(216, 178, 94, 0.55);
+  box-shadow: 0 0 0 3px rgba(216, 178, 94, 0.12);
+}
+
+/* --- Feature icon chip ---------------------------------------------------- */
+.chip {
+  background: radial-gradient(120% 120% at 30% 20%, rgba(216,178,94,0.22), rgba(226,59,52,0.12));
+  border: 1px solid var(--line);
+}
+
+/* ==========================================================================
+   Phone mockup — a lived-in Scorebug UI (dummy Edmonton Oilers docket)
+   ========================================================================== */
+.phone {
+  width: 300px;
+  max-width: 84vw;
+  aspect-ratio: 300 / 620;
+  border-radius: 42px;
+  padding: 12px;
+  background: linear-gradient(160deg, #2c241a, #100c08);
+  border: 1px solid rgba(216, 178, 94, 0.22);
+  box-shadow:
+    0 50px 90px -40px rgba(0,0,0,0.9),
+    inset 0 1px 0 rgba(244,236,219,0.12);
+  position: relative;
+}
+.phone::after { /* side button */
+  content: ""; position: absolute; right: -3px; top: 130px;
+  width: 3px; height: 46px; border-radius: 3px;
+  background: rgba(216,178,94,0.25);
+}
+.phone-screen {
+  height: 100%;
+  border-radius: 32px;
+  background:
+    radial-gradient(120% 60% at 50% -10%, rgba(226,59,52,0.16), transparent 60%),
+    linear-gradient(180deg, #1b150e, #120d08);
+  overflow: hidden;
+  position: relative;
+  border: 1px solid rgba(0,0,0,0.6);
+  display: flex;
+  flex-direction: column;
+}
+.notch {
+  position: absolute; top: 10px; left: 50%; transform: translateX(-50%);
+  width: 92px; height: 18px; border-radius: 12px; background: #0b0805; z-index: 5;
+}
+.screen-scroll { padding: 34px 14px 16px; overflow: hidden; }
+
+.app-tag { font-size: 10px; letter-spacing: 0.18em; color: var(--ink-muted); }
+.app-title { font-size: 15px; color: var(--cream); }
+
+.mini-card {
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: linear-gradient(150deg, rgba(58,46,32,0.5), rgba(24,18,12,0.55));
+  backdrop-filter: blur(6px);
+}
+.team-row { display: flex; align-items: center; justify-content: space-between; }
+.team-badge {
+  width: 30px; height: 30px; border-radius: 8px;
+  display: grid; place-items: center; font-weight: 700; font-size: 12px; color: #fff;
+}
+.oilers { background: linear-gradient(160deg, #ff5b23, #16305e); }
+.flames { background: linear-gradient(160deg, #d21c2b, #f2b70b); }
+.score { font-size: 22px; color: var(--cream); font-weight: 700; letter-spacing: 0.02em; }
+
+.docket-item { display: flex; align-items: center; gap: 8px; padding: 7px 0; border-bottom: 1px solid var(--line-soft); }
+.docket-item:last-child { border-bottom: 0; }
+.window-pill {
+  font-size: 9px; letter-spacing: 0.12em;
+  color: var(--beacon); border: 1px solid rgba(226,59,52,0.4);
+  border-radius: 999px; padding: 2px 6px; background: rgba(226,59,52,0.08);
+}
+.stat-bar { height: 5px; border-radius: 999px; background: rgba(244,236,219,0.1); overflow: hidden; }
+.stat-bar > span { display: block; height: 100%; border-radius: 999px; background: linear-gradient(90deg, var(--brass), var(--beacon)); }
+.mono { font-variant-numeric: tabular-nums; }
+
+/* --- Reveal on scroll ----------------------------------------------------- */
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1); }
+.reveal.in { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .beacon-dot { animation: none; }
+  html { scroll-behavior: auto; }
+}
