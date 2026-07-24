@@ -1,0 +1,196 @@
+/* ==========================================================================
+   Cadenic Studios — studio / portfolio site
+   Refined deep-space theme. Pairs with Tailwind (CDN) for layout utilities;
+   this file owns the palette, surfaces, motion and hover craft.
+   ========================================================================== */
+
+:root {
+  /* Deep-space bases */
+  --void:      #050b14;
+  --void-deep: #030710;
+  --surface:   #0a1220;
+  --surface-2: #0d1727;
+  --raised:    #111e30;
+
+  /* Hairlines */
+  --line:      #16253b;
+  --line-soft: rgba(241, 245, 249, 0.07);
+
+  /* Inks */
+  --ink:       #f1f5f9;
+  --ink-muted: #94a3b8;
+  --ink-faint: #64748b;
+
+  /* Product accents */
+  --dv:        #4ade80;   /* Delta-V */
+  --dv-deep:   #2f5233;
+  --dv-glow:   rgba(74, 222, 128, 0.28);
+  --sb:        #f87171;   /* Scorebug */
+  --sb-deep:   #c1272d;
+  --sb-glow:   rgba(248, 113, 113, 0.28);
+}
+
+/* --- Base ----------------------------------------------------------------- */
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  color: var(--ink);
+  background-color: var(--void);
+  /* Soft nebula wash + faint grain so large dark areas never band. */
+  background-image:
+    radial-gradient(1100px 600px at 82% -10%, rgba(47, 82, 51, 0.14), transparent 62%),
+    radial-gradient(900px 620px at 6% 2%, rgba(193, 39, 45, 0.09), transparent 58%),
+    radial-gradient(900px 800px at 50% 118%, rgba(22, 37, 59, 0.7), transparent 62%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 140 140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  background-attachment: fixed;
+}
+
+.display { font-family: 'Syne', system-ui, sans-serif; }
+.label   { letter-spacing: 0.2em; }
+
+::selection { background: var(--dv-deep); color: #fff; }
+
+:focus-visible {
+  outline: 2px solid var(--dv);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* --- Rules ---------------------------------------------------------------- */
+.rule { height: 1px; background: linear-gradient(90deg, transparent, var(--line), transparent); }
+
+/* --- Surfaces ------------------------------------------------------------- */
+.panel {
+  background: linear-gradient(158deg, rgba(17, 30, 48, 0.72), rgba(10, 18, 32, 0.58));
+  backdrop-filter: blur(14px) saturate(118%);
+  -webkit-backdrop-filter: blur(14px) saturate(118%);
+  border: 1px solid var(--line);
+  box-shadow:
+    inset 0 1px 0 rgba(241, 245, 249, 0.05),
+    0 24px 60px -32px rgba(0, 0, 0, 0.9);
+}
+
+.showcase {
+  position: relative;
+  overflow: hidden;
+  transition: transform .4s cubic-bezier(.2,.7,.2,1), border-color .4s, box-shadow .4s;
+}
+.showcase::before {
+  content: "";
+  position: absolute; inset: 0;
+  background: radial-gradient(115% 75% at 0% 0%, rgba(241, 245, 249, 0.055), transparent 48%);
+  pointer-events: none;
+}
+.showcase:hover { transform: translateY(-5px); }
+
+.showcase-dv:hover {
+  border-color: rgba(74, 222, 128, 0.34);
+  box-shadow: inset 0 1px 0 rgba(241,245,249,.07), 0 34px 70px -30px rgba(0,0,0,.92), 0 0 46px -20px var(--dv-glow);
+}
+.showcase-sb:hover {
+  border-color: rgba(248, 113, 113, 0.34);
+  box-shadow: inset 0 1px 0 rgba(241,245,249,.07), 0 34px 70px -30px rgba(0,0,0,.92), 0 0 46px -20px var(--sb-glow);
+}
+
+/* Art plate holding each product mark */
+.plate {
+  background:
+    radial-gradient(90% 90% at 50% 20%, rgba(241,245,249,0.05), transparent 60%),
+    var(--void-deep);
+  border: 1px solid var(--line);
+}
+.plate img { transition: transform .55s cubic-bezier(.2,.7,.2,1); }
+.showcase:hover .plate img { transform: scale(1.05); }
+
+/* --- Status badges (non-interactive by design) ---------------------------- */
+.badge {
+  display: inline-flex; align-items: center; gap: .5rem;
+  border-radius: 999px;
+  padding: .3rem .8rem;
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .16em;
+  white-space: nowrap;
+  cursor: default;
+  user-select: none;
+}
+.badge-dv { background: rgba(47, 82, 51, 0.22); color: var(--dv); border: 1px solid rgba(47, 82, 51, 0.5); }
+.badge-sb { background: rgba(193, 39, 45, 0.14); color: var(--sb); border: 1px solid rgba(193, 39, 45, 0.4); }
+
+.pulse {
+  width: 6px; height: 6px; border-radius: 999px; background: currentColor;
+  box-shadow: 0 0 0 0 currentColor;
+  animation: pulse 2.4s ease-out infinite;
+}
+@keyframes pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(255,255,255,.35); }
+  70%  { box-shadow: 0 0 0 9px rgba(255,255,255,0); }
+  100% { box-shadow: 0 0 0 0 rgba(255,255,255,0); }
+}
+
+/* Non-interactive status strip that replaces an unavailable CTA */
+.status-strip {
+  display: inline-flex; align-items: center; gap: .6rem;
+  border: 1px dashed var(--line);
+  background: rgba(3, 7, 16, 0.5);
+  color: var(--ink-faint);
+  border-radius: .75rem;
+  padding: .8rem 1.1rem;
+  font-size: .8rem;
+  cursor: default;
+  user-select: none;
+}
+
+/* --- Links / buttons ------------------------------------------------------ */
+.btn {
+  display: inline-flex; align-items: center; gap: .55rem;
+  border-radius: .75rem;
+  font-weight: 700;
+  font-size: .78rem;
+  letter-spacing: .1em;
+  padding: .95rem 1.5rem;
+  transition: transform .18s ease, box-shadow .28s ease, filter .2s, background .25s;
+}
+.btn-sb {
+  background: linear-gradient(180deg, var(--sb), var(--sb-deep));
+  color: #fff;
+  box-shadow: 0 10px 26px -12px var(--sb-glow), inset 0 1px 0 rgba(255,255,255,.2);
+}
+.btn-sb:hover { transform: translateY(-2px); filter: brightness(1.07); box-shadow: 0 16px 34px -14px var(--sb-glow), inset 0 1px 0 rgba(255,255,255,.24); }
+.btn-sb:active { transform: translateY(0); }
+
+.btn-ghost { border: 1px solid var(--line); color: var(--ink-muted); background: rgba(10, 18, 32, .5); }
+.btn-ghost:hover { border-color: rgba(148, 163, 184, .42); color: var(--ink); transform: translateY(-2px); }
+
+.navlink { position: relative; transition: color .22s ease; }
+.navlink::after {
+  content: ""; position: absolute; left: 0; bottom: -5px;
+  width: 100%; height: 1px; background: currentColor;
+  transform: scaleX(0); transform-origin: right;
+  transition: transform .3s cubic-bezier(.2,.7,.2,1);
+}
+.navlink:hover::after { transform: scaleX(1); transform-origin: left; }
+
+/* --- Legal panel ---------------------------------------------------------- */
+.legal {
+  max-height: 15rem;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--line) transparent;
+}
+.legal::-webkit-scrollbar { width: 8px; }
+.legal::-webkit-scrollbar-track { background: transparent; }
+.legal::-webkit-scrollbar-thumb { background: var(--line); border-radius: 999px; }
+.legal h4 { color: var(--ink); font-weight: 700; }
+
+/* --- Reveal on scroll ----------------------------------------------------- */
+.reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1); }
+.reveal.in { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .pulse { animation: none; }
+  .showcase:hover, .btn:hover, .btn-ghost:hover { transform: none; }
+  html { scroll-behavior: auto; }
+}

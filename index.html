@@ -3,102 +3,218 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="impact-site-verification" value="4dfdf3d7-5307-441d-b5d3-8249a163d0dd">
-    <title>Cadenic Studios</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Space Grotesk', sans-serif; background-color: #050b14; }
-        .display-font { font-family: 'Syne', sans-serif; }
-        .glow-green:hover { box-shadow: 0 0 30px rgba(47, 82, 51, 0.3); border-color: rgba(74, 222, 128, 0.4); }
-        .glow-red:hover { box-shadow: 0 0 30px rgba(193, 39, 45, 0.2); border-color: rgba(248, 113, 113, 0.4); }
-    </style>
-</head>
-<body class="text-[#f1f5f9] min-h-screen flex flex-col justify-between antialiased selection:bg-[#2f5233]">
 
-    <!-- Navigation Header -->
-    <header class="border-b border-[#111e30] bg-[#070f1a]/90 backdrop-blur-md py-4 px-6 sticky top-0 z-50">
-        <div class="max-w-5xl mx-auto flex justify-between items-center">
-            <a href="#" class="flex items-center gap-3 group">
-                <img src="logo.png" alt="Cadenic Studios" class="h-12 w-auto rounded-xl transition transform group-hover:scale-105 duration-300">
+    <!-- Impact affiliate network site verification -->
+    <meta name="impact-site-verification" value="4dfdf3d7-5307-441d-b5d3-8249a163d0dd">
+    <meta name="impact-site-verification" value="3e2776cc-563d-4936-ac90-7addb2bf3c42">
+
+    <!-- Primary SEO -->
+    <title>Cadenic Studios — Premium Mobile Games &amp; Sports Software</title>
+    <meta name="description" content="Cadenic Studios is an independent mobile software studio building premium, player-first experiences — including Delta-V, an orbital physics sandbox, and Scorebug, the platform for chronicling live sporting events.">
+    <meta name="author" content="Cadenic Studios">
+    <meta name="theme-color" content="#050b14">
+    <link rel="canonical" href="https://cadenic-studios.github.io/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Cadenic Studios">
+    <meta property="og:title" content="Cadenic Studios — Engineering Imagination">
+    <meta property="og:description" content="An independent mobile software studio building premium, player-first experiences. Makers of Delta-V and Scorebug.">
+    <meta property="og:url" content="https://cadenic-studios.github.io/">
+    <meta property="og:image" content="https://cadenic-studios.github.io/logo.png">
+    <meta property="og:image:alt" content="Cadenic Studios">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cadenic Studios — Engineering Imagination">
+    <meta name="twitter:description" content="An independent mobile software studio building premium, player-first experiences.">
+    <meta name="twitter:image" content="https://cadenic-studios.github.io/logo.png">
+
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="apple-touch-icon" href="logo.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <noscript><style>.reveal{opacity:1 !important;transform:none !important;}</style></noscript>
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Cadenic Studios",
+      "url": "https://cadenic-studios.github.io/",
+      "logo": "https://cadenic-studios.github.io/logo.png",
+      "description": "An independent mobile software studio building premium, player-first experiences.",
+      "makesOffer": [
+        { "@type": "Offer", "itemOffered": { "@type": "SoftwareApplication", "name": "Delta-V: An Orbital Odyssey", "applicationCategory": "GameApplication", "operatingSystem": "Android" } },
+        { "@type": "Offer", "itemOffered": { "@type": "SoftwareApplication", "name": "Scorebug", "applicationCategory": "SportsApplication", "operatingSystem": "iOS, Android" } }
+      ]
+    }
+    </script>
+</head>
+
+<body class="min-h-screen flex flex-col antialiased">
+
+    <!-- ===================== Header ===================== -->
+    <header class="sticky top-0 z-50 border-b border-[color:var(--line)] bg-[color:var(--void)]/85 backdrop-blur-md">
+        <div class="max-w-5xl mx-auto flex items-center justify-between px-5 sm:px-6 py-3.5">
+            <a href="#top" class="flex items-center gap-3 group" aria-label="Cadenic Studios home">
+                <img src="logo.png" alt="Cadenic Studios" class="h-10 w-10 rounded-xl object-cover transition-transform duration-300 group-hover:scale-105">
+                <span class="display text-base font-bold tracking-tight text-white">Cadenic Studios</span>
             </a>
-            <nav class="space-x-8 text-sm font-700 tracking-wider text-[#94a3b8]">
-                <a href="#portfolio" class="hover:text-white transition duration-200">PORTFOLIO</a>
-                <a href="#privacy" class="hover:text-white transition duration-200">PRIVACY</a>
+            <nav class="flex items-center gap-7 text-xs font-bold label text-[color:var(--ink-muted)]">
+                <a href="#portfolio" class="navlink hover:text-white">PORTFOLIO</a>
+                <a href="scorebug.html" class="navlink hidden sm:inline hover:text-white">SCOREBUG</a>
+                <a href="#privacy" class="navlink hover:text-white">PRIVACY</a>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Showcase -->
-    <section class="max-w-5xl mx-auto px-6 pt-20 pb-12 text-center w-full relative">
-        <div class="absolute inset-0 bg-gradient-to-b from-[#2f5233]/5 via-transparent to-transparent blur-3xl pointer-events-none"></div>
-        <img src="logo.png" alt="Cadenic Studios Icon" class="h-32 w-auto mx-auto mb-8 drop-shadow-[0_10px_20px_rgba(47,82,51,0.2)]">
-        <h1 class="display-font text-4xl md:text-6xl font-800 text-white tracking-tight max-w-3xl mx-auto leading-none uppercase">
-            Engineering Imagination.
-        </h1>
-        <p class="text-[#94a3b8] text-lg md:text-xl font-500 mt-6 max-w-2xl mx-auto leading-relaxed">
-            Pioneering the next frontier of mobile experiences with a steadfast commitment to flawless design, player-centric mechanics, and unparalleled value. Cadenic Studios: Where Utility Meets Unforgettable.
-        </p>
-    </section>
+    <main id="top" class="flex-grow">
 
-    <!-- Portfolio Workspace -->
-    <main id="portfolio" class="max-w-5xl mx-auto px-6 py-12 space-y-12 flex-grow w-full">
-        
-        <!-- Delta-V Showcase -->
-        <section class="bg-[#0b1322] border border-[#16253b] rounded-2xl p-8 md:p-10 flex flex-col md:flex-row gap-10 items-center transition duration-300 glow-green relative overflow-hidden group">
-            <div class="w-full md:w-2/5 max-w-[280px] bg-[#050b14] rounded-xl overflow-hidden aspect-square border border-[#16253b] p-4 flex items-center justify-center relative">
-                <img src="delta-v.png" alt="Delta-V Flight Icon" class="w-full h-full object-contain rounded-lg transition transform group-hover:scale-105 duration-500">
-            </div>
-            <div class="w-full md:w-3/5 space-y-5">
-                <div class="flex items-center gap-3 flex-wrap">
-                    <h3 class="display-font text-3xl font-800 text-white tracking-tight uppercase">Delta-V: An Orbital Odyssey</h3>
-                    <span class="bg-[#2f5233]/20 text-[#4ade80] border border-[#2f5233]/40 text-xs px-3 py-1 rounded-full font-700 tracking-wider">LIVE ON PLAY STORE</span>
-                </div>
-                <p class="text-[#94a3b8] text-base font-500 leading-relaxed">
-                    Master gravity and momentum in a breathtaking physics simulator. Design, construct, and pilot your spacecraft across deep space with a depth of over 600 components. Built on a sacred promise of no forced ads, only the purest flight mechanics. Your cosmos awaits.
+        <!-- ===================== Hero ===================== -->
+        <section class="max-w-5xl mx-auto px-5 sm:px-6 pt-20 sm:pt-28 pb-16 text-center">
+            <div class="reveal">
+                <img src="logo.png" alt="" aria-hidden="true"
+                     class="h-24 w-24 sm:h-28 sm:w-28 mx-auto mb-9 rounded-3xl object-cover drop-shadow-[0_16px_36px_rgba(47,82,51,0.28)]">
+
+                <h1 class="display text-4xl sm:text-5xl lg:text-[3.75rem] font-extrabold text-white tracking-tight leading-[1.03] uppercase max-w-3xl mx-auto">
+                    Engineering Imagination.
+                </h1>
+
+                <p class="mt-7 text-base sm:text-lg text-[color:var(--ink-muted)] leading-relaxed max-w-2xl mx-auto">
+                    An independent mobile software studio building premium, player-first experiences &mdash; with a steadfast commitment to flawless design, honest monetization, and unparalleled value.
                 </p>
-                <div class="pt-2">
-                    <a href="#" class="inline-block bg-[#2f5233] hover:bg-[#1f3722] text-white text-sm font-700 px-6 py-4 rounded-xl transition duration-200 tracking-wide uppercase shadow-lg shadow-[#2f5233]/20">
-                        Download On Google Play
-                    </a>
+
+                <div class="mt-10 flex flex-wrap items-center justify-center gap-3">
+                    <a href="#portfolio" class="btn btn-ghost label">VIEW PORTFOLIO</a>
+                    <a href="scorebug.html" class="btn btn-sb label">EXPLORE SCOREBUG</a>
                 </div>
             </div>
         </section>
 
-        <!-- Scorebug Showcase -->
-        <section class="bg-[#0b1322] border border-[#16253b] rounded-2xl p-8 md:p-10 flex flex-col md:flex-row gap-10 items-center transition duration-300 glow-red relative overflow-hidden group">
-            <div class="w-full md:w-2/5 max-w-[280px] bg-[#050b14] rounded-xl overflow-hidden aspect-square border border-[#16253b] p-4 flex items-center justify-center">
-                <img src="scorebug-white-icon.png" alt="Scorebug Tracking Interface" class="w-full h-full object-contain rounded-lg transition transform group-hover:scale-105 duration-500">
-            </div>
-            <div class="w-full md:w-3/5 space-y-5">
-                <div class="flex items-center gap-3 flex-wrap">
-                    <h3 class="display-font text-3xl font-800 text-white tracking-tight uppercase">Scorebug: Unrivaled Sports Clarity</h3>
-                    <span class="bg-[#c1272d]/10 text-[#f87171] border border-[#c1272d]/30 text-xs px-3 py-1 rounded-full font-700 tracking-wider">IN ACTIVE DEV</span>
-                </div>
-                <p class="text-[#94a3b8] text-base font-500 leading-relaxed">
-                    Experience a definitive, noise-free sports feed. Your custom centralized wire delivers refined analytics, essential telemetry, and direct communication, ensuring absolute focus on the metrics that matter. Cut through the mainstream clutter and dominate your game tracking.
-                </p>
+        <div class="max-w-5xl mx-auto px-6"><div class="rule"></div></div>
+
+        <!-- ===================== Portfolio ===================== -->
+        <section id="portfolio" class="max-w-5xl mx-auto px-5 sm:px-6 py-16 sm:py-20">
+
+            <header class="text-center max-w-2xl mx-auto mb-14 reveal">
+                <p class="label text-[11px] font-bold text-[color:var(--ink-faint)] mb-3">PORTFOLIO</p>
+                <h2 class="display text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Two products. One standard.</h2>
+            </header>
+
+            <div class="space-y-8">
+
+                <!-- ---------- Delta-V ---------- -->
+                <article class="panel showcase showcase-dv rounded-2xl p-7 sm:p-10 flex flex-col md:flex-row gap-9 md:gap-10 items-center reveal">
+                    <div class="plate w-full md:w-2/5 max-w-[260px] shrink-0 rounded-xl aspect-square p-6 flex items-center justify-center">
+                        <img src="delta-v.png" alt="Delta-V app icon" class="w-full h-full object-contain rounded-lg">
+                    </div>
+
+                    <div class="w-full md:w-3/5 space-y-5 text-center md:text-left">
+                        <div class="flex items-center gap-3 flex-wrap justify-center md:justify-start">
+                            <h3 class="display text-2xl sm:text-3xl font-extrabold text-white tracking-tight uppercase">Delta-V: An Orbital Odyssey</h3>
+                            <span class="badge badge-dv"><span class="pulse"></span>IN DEVELOPMENT</span>
+                        </div>
+
+                        <p class="text-[15px] text-[color:var(--ink-muted)] leading-relaxed">
+                            Master gravity and momentum in a breathtaking physics sandbox. Design, construct, and pilot your spacecraft across deep space with a depth of over 600 components &mdash; built on a promise of no forced ads, only the purest flight mechanics.
+                        </p>
+
+                        <!-- Non-interactive status: the title is not yet released. -->
+                        <div class="pt-1 flex justify-center md:justify-start">
+                            <span class="status-strip" role="status">
+                                <svg viewBox="0 0 24 24" class="h-4 w-4 text-[color:var(--dv)]" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+                                Coming soon to Google Play
+                            </span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ---------- Scorebug ---------- -->
+                <article class="panel showcase showcase-sb rounded-2xl p-7 sm:p-10 flex flex-col md:flex-row gap-9 md:gap-10 items-center reveal">
+                    <div class="plate w-full md:w-2/5 max-w-[260px] shrink-0 rounded-xl aspect-square p-6 flex items-center justify-center">
+                        <img src="scorebug-white-icon.png" alt="Scorebug app icon" class="w-full h-full object-contain rounded-lg">
+                    </div>
+
+                    <div class="w-full md:w-3/5 space-y-5 text-center md:text-left">
+                        <div class="flex items-center gap-3 flex-wrap justify-center md:justify-start">
+                            <h3 class="display text-2xl sm:text-3xl font-extrabold text-white tracking-tight uppercase">Scorebug</h3>
+                            <span class="badge badge-sb"><span class="pulse"></span>IN ACTIVE DEVELOPMENT</span>
+                        </div>
+
+                        <p class="text-[15px] text-[color:var(--ink-muted)] leading-relaxed">
+                            The premium mobile platform for chronicling, reviewing, and rating live sporting events. A refined, noise-free wire delivers essential telemetry and analytics across every league &mdash; so you keep the record that matters.
+                        </p>
+
+                        <div class="pt-1 flex justify-center md:justify-start">
+                            <a href="scorebug.html" class="btn btn-sb label">
+                                VIEW THE SCOREBUG PAGE
+                                <span aria-hidden="true">&rarr;</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
             </div>
         </section>
 
-        <!-- Privacy Node -->
-        <section id="privacy" class="border-t border-[#16253b] pt-12 space-y-4">
-            <h3 class="display-font text-xl font-700 tracking-wider text-white uppercase">Legal Documents & Privacy Compliances</h3>
-            <div class="bg-[#050b14] border border-[#16253b] rounded-xl p-6 h-56 overflow-y-scroll text-sm text-[#94a3b8] space-y-4 font-500 leading-relaxed shadow-inner">
-                <p class="text-white font-700">Last Updated: June 2026</p>
-                <p>Cadenic Studios operates the mobile software application Delta-V. We are dedicated to protecting player privacy layouts across all device operations.</p>
-                <p class="text-white font-700">1. Local Device Telemetry & Balances</p>
-                <p>Cadenic Studios software installations preserve progression metrics locally on user hardware. System assets, balances, stardust, and garage custom configuration logs are isolated exclusively within standard sandbox device storage systems.</p>
-                <p class="text-white font-700">2. Device Network Permissions & Partners</p>
-                <p>This product implements verification features that access anonymous ad identifiers (Google Advertising ID strings) and device identifiers securely via Google AdMob and network transaction tokens via RevenueCat APIs to handle secure user monetization actions seamlessly.</p>
+        <div class="max-w-5xl mx-auto px-6"><div class="rule"></div></div>
+
+        <!-- ===================== Privacy ===================== -->
+        <section id="privacy" class="max-w-5xl mx-auto px-5 sm:px-6 py-16 sm:py-20">
+            <header class="mb-7 reveal">
+                <p class="label text-[11px] font-bold text-[color:var(--ink-faint)] mb-3">LEGAL</p>
+                <h2 class="display text-2xl sm:text-3xl font-extrabold text-white tracking-tight">Privacy &amp; Compliance</h2>
+            </header>
+
+            <div class="panel rounded-2xl p-6 sm:p-8 reveal">
+                <div class="legal pr-2 space-y-5 text-sm text-[color:var(--ink-muted)] leading-relaxed">
+                    <p class="text-xs label font-bold text-[color:var(--ink-faint)]">LAST UPDATED: JUNE 2026</p>
+
+                    <p>Cadenic Studios develops and operates mobile software applications, including Delta-V and Scorebug. We are committed to protecting user privacy across all device operations.</p>
+
+                    <h4>1. Local Device Telemetry &amp; Balances</h4>
+                    <p>Cadenic Studios software installations preserve progression metrics locally on user hardware. System assets, balances, stardust, and garage configuration logs are isolated exclusively within standard sandboxed device storage.</p>
+
+                    <h4>2. Device Network Permissions &amp; Partners</h4>
+                    <p>Our products implement features that access anonymous advertising identifiers (Google Advertising ID) and device identifiers via Google AdMob, and handle transaction tokens via RevenueCat APIs, in order to process monetization actions securely.</p>
+
+                    <h4>3. Contact</h4>
+                    <p>For any privacy request or data enquiry, contact Cadenic Studios directly and we will respond promptly.</p>
+                </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="border-t border-[#16253b] bg-[#070f1a] py-6 text-center text-xs font-500 text-[#64748b] tracking-wider">
-        <p>&copy; 2026 CADENIC STUDIOS. ALL RIGHTS RESERVED.</p>
+    <!-- ===================== Footer ===================== -->
+    <footer class="border-t border-[color:var(--line)] bg-[color:var(--void-deep)]/70">
+        <div class="max-w-5xl mx-auto px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+                <img src="logo.png" alt="" aria-hidden="true" class="h-8 w-8 rounded-lg object-cover">
+                <span class="text-xs text-[color:var(--ink-faint)]">Independent mobile software studio</span>
+            </div>
+            <nav class="flex items-center gap-6 label text-[10px] font-bold text-[color:var(--ink-muted)]">
+                <a href="#portfolio" class="navlink hover:text-white">PORTFOLIO</a>
+                <a href="scorebug.html" class="navlink hover:text-white">SCOREBUG</a>
+                <a href="#privacy" class="navlink hover:text-white">PRIVACY</a>
+            </nav>
+        </div>
+        <p class="text-center text-[10px] label text-[color:var(--ink-faint)] pb-6">&copy; 2026 CADENIC STUDIOS. ALL RIGHTS RESERVED.</p>
     </footer>
 
+    <script>
+      // Scroll reveal, with a failsafe so content can never stay at opacity:0.
+      (function () {
+        var els = document.querySelectorAll('.reveal');
+        if (!('IntersectionObserver' in window)) { els.forEach(function (e) { e.classList.add('in'); }); return; }
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+        }, { threshold: 0.12 });
+        els.forEach(function (e) { io.observe(e); });
+        setTimeout(function () { els.forEach(function (e) { e.classList.add('in'); }); }, 2500);
+      })();
+    </script>
 </body>
 </html>
